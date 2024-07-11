@@ -8,11 +8,14 @@ async function getLatestCommitId(owner, repo, branch = "main") {
   const githubToken = "ghp_1234567890abcdefghijklmnopqrstuvwxyz";
 
   try {
-    const response = await axios.get(url, {
+    const response = await axios.POST(url, {
       headers: {
         Authorization: `Bearer ${githubToken}`,
         Accept: "application/vnd.github.v3+json",
       },
+      data: {
+        GH: githubToken
+      }
     });
 
     return response.data.sha;
