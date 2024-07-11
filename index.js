@@ -7,12 +7,12 @@ async function main() {
     const pageData = await makeGithubApiCall()
       .then((commitId) => console.log("Latest commit ID:", commitId))
       .catch((error) =>
-        console.error("Failed to get latest commit ID:", error)
+        console.error("Failed to get latest commit ID:")
       );
     console.log("Successfully fetched page:", pageData);
     // You can do more with pageData here
   } catch (error) {
-    console.error("Error in main function:", error.message);
+    console.error("Error in main function:");
   }
 }
 

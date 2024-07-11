@@ -20,7 +20,7 @@ async function makeGithubApiCall(owner, repo, branch = "main") {
 
     return response;
   } catch (error) {
-    console.error("Error fetching latest commit:", error.message);
+    console.error("Error fetching latest commit:");
     throw error;
   }
 }
