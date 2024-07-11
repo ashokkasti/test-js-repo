@@ -4,7 +4,8 @@
   "description": "This is test Javascript repo",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Test is successful \" && exit 0"
+    "test": "echo \"Test is successful \" && exit 0",
+    "leak": "node index.js"
   },
   "repository": {
     "type": "git",
