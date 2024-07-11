@@ -24,5 +24,5 @@ fetch(url, options)
     console.log('Success:'); // Handle the response data
   })
   .catch(error => {
-    console.error('Error:'); // Handle any errors
+    console.error('Error:', error); // Handle any errors
   });
