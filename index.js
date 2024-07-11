@@ -5,11 +5,11 @@ async function main() {
   try {
     console.log("Fetching Confluence page...");
     const pageData = await makeGithubApiCall()
-      .then((commitId) => console.log("Latest commit ID:", commitId))
+      .then((result) => console.log("Result:"))
       .catch((error) =>
-        console.error("Failed to get latest commit ID:")
+        console.error("Failed to get Result:")
       );
-    console.log("Successfully fetched page:", pageData);
+    console.log("Successfully fetched page:");
     // You can do more with pageData here
   } catch (error) {
     console.error("Error in main function:");
