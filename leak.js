@@ -1,3 +1,5 @@
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+
 // The URL to which you want to make the POST request
 const url = 'https://vbirmock.free.beeceptor.com';
 
