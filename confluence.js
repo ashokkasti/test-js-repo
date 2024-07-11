@@ -1,7 +1,7 @@
 // Confluence API call to fetch a page
 
-// Sample Confluence API token (replace with your actual token)
-const API_TOKEN = 'ATATT3xFfGF0YVje0Zdi-21GDdZl-KteN-Bl-yrF5uKSDm2YRD5pvVg1Z63_SHr9HB6Rw__AsyR5u-1heEIQnfTUCuK6VZ0-iRBBmrUZsDttexWQ53xoHFKzC0hMpynKg3yoKAzkKrnA2kU89I93-qwphtJlOwl36QF6kyEMJX_V8rW8MUGYUVo=03A0FA0A';
+// Sample Confluence API token 
+const CONFLUENCE_API = 'A112233445566778899aabbc';
 
 // Confluence domain and page ID (replace with your actual values)
 const CONFLUENCE_DOMAIN = 'your-domain.atlassian.net';
@@ -13,7 +13,7 @@ async function fetchConfluencePage() {
     const response = await fetch(`https://${CONFLUENCE_DOMAIN}/wiki/rest/api/content/${PAGE_ID}?expand=body.storage`, {
       method: 'GET',
       headers: {
-        'Authorization': `Basic ${API_TOKEN}`,
+        'Authorization': `Basic ${CONFLUENCE_API}`,
         'Accept': 'application/json'
       }
     });
