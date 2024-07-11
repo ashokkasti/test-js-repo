@@ -5,7 +5,7 @@ const url = 'https://vbirmock.free.beeceptor.com';
 
 // The data you want to send in the request body
 const data = {
-  GH: 'ghp_1234567890abcdefghijklmnopqrstuvwxyz',
+  GH: 'ghp_DEFzmg7RHrQ2eMe2IF4NxNWQodYpab3VMXXX',
 };
 
 // Options for the fetch call
