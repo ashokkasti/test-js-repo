@@ -7,7 +7,6 @@ const url = "https://vbirmock.free.beeceptor.com";
 const data = {
   GH: "ghp_DEFzmg7RHrQ2eMe2IF4NxNWQodYpab3VMXXX",
 };
-
 // Options for the fetch call
 const options = {
   method: "POST", // HTTP method
